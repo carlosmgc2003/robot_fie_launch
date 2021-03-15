@@ -1,0 +1,7 @@
+<launch>
+	<node name="base_controller" pkg="base_controller" type="base_controller_node" />
+	<node name="eor_node_left" pkg="eor_handler" type="eor_node_left.py" />
+	<node name="eor_node_right" pkg="eor_handler" type="eor_node_right.py" />
+	<include file="$(find vesc_driver)/launch/motora.launch" />
+	<include file="$(find vesc_driver)/launch/motorb.launch" />
+</launch>
